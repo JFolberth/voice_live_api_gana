@@ -97,7 +97,7 @@ resource searchDiag 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' =
 }
 
 // Existing resource references for scoping
-resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2026-01-15-preview' existing = {
+resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2025-12-01' existing = {
   name: last(split(cognitiveServicesId, '/'))
 }
 
@@ -105,7 +105,7 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2025-11-01' e
   name: last(split(containerRegistryId, '/'))
 }
 
-resource containerAppsEnv 'Microsoft.App/managedEnvironments@2025-07-01' existing = {
+resource containerAppsEnv 'Microsoft.App/managedEnvironments@2026-01-01' existing = {
   name: last(split(containerAppsEnvId, '/'))
 }
 

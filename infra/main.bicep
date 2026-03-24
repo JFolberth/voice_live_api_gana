@@ -31,7 +31,7 @@ var staticWebAppName = 'swa-${environmentName}-${resourceToken}'
 var logAnalyticsName = 'log-${environmentName}-${resourceToken}'
 var appInsightsName = 'appi-${environmentName}-${resourceToken}'
 
-resource rg 'Microsoft.Resources/resourceGroups@2025-04-01' = {
+resource rg 'Microsoft.Resources/resourceGroups@2024-11-01' = {
   name: resourceGroupName
   location: location
 }

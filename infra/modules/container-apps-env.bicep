@@ -4,7 +4,7 @@ param name string
 @description('Azure region')
 param location string
 
-resource managedEnvironment 'Microsoft.App/managedEnvironments@2025-07-01' = {
+resource managedEnvironment 'Microsoft.App/managedEnvironments@2026-01-01' = {
   name: name
   location: location
   properties: {

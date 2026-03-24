@@ -28,7 +28,7 @@ param allowedOrigins string = ''
 @description('Application Insights connection string')
 param appInsightsConnectionString string = ''
 
-resource containerApp 'Microsoft.App/containerApps@2025-07-01' = {
+resource containerApp 'Microsoft.App/containerApps@2026-01-01' = {
   name: name
   location: location
   identity: {

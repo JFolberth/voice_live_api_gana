@@ -19,7 +19,7 @@ param modelVersion string = '2025-12-15'
 @description('Model deployment capacity (TPM in thousands)')
 param deploymentCapacity int = 5
 
-resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2026-01-15-preview' = {
+resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2025-12-01' = {
   name: name
   location: location
   kind: 'AIServices'
@@ -38,7 +38,7 @@ resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2026-01-
   }
 }
 
-resource aiProject 'Microsoft.CognitiveServices/accounts/projects@2026-01-15-preview' = {
+resource aiProject 'Microsoft.CognitiveServices/accounts/projects@2025-12-01' = {
   parent: cognitiveServicesAccount
   name: projectName
   location: location
@@ -48,7 +48,7 @@ resource aiProject 'Microsoft.CognitiveServices/accounts/projects@2026-01-15-pre
   properties: {}
 }
 
-resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2026-01-15-preview' = {
+resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-12-01' = {
   parent: cognitiveServicesAccount
   name: deploymentName
   sku: {

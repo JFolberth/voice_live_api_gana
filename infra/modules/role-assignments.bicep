@@ -63,7 +63,7 @@ resource searchRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-0
 }
 
 // Existing resource references for scoping
-resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2026-01-15-preview' existing = {
+resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2025-12-01' existing = {
   name: last(split(cognitiveServicesAccountId, '/'))
 }
 

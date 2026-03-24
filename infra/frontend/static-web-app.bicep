@@ -7,7 +7,7 @@ param location string
 @description('Application Insights connection string')
 param appInsightsConnectionString string = ''
 
-resource staticWebApp 'Microsoft.Web/staticSites@2024-04-01' = {
+resource staticWebApp 'Microsoft.Web/staticSites@2025-05-01' = {
   name: name
   location: location
   sku: {
@@ -23,7 +23,7 @@ resource staticWebApp 'Microsoft.Web/staticSites@2024-04-01' = {
   }
 }
 
-resource appSettings 'Microsoft.Web/staticSites/config@2024-04-01' = {
+resource appSettings 'Microsoft.Web/staticSites/config@2025-05-01' = {
   parent: staticWebApp
   name: 'appsettings'
   properties: {
